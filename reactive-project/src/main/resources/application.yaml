@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  webflux:
+    base-path: '/api/v1'
+  r2dbc:
+    url: r2dbc:postgresql://aws-0-us-west-1.pooler.supabase.com:5432/postgres
+    username: postgres.nuqcymdbexsaxfszlqfn
+    password: Pr0DuCcI0N123
