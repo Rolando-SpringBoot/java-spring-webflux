@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -44,6 +45,14 @@ public class BookController {
   @DeleteMapping("/{id}")
   public Mono<Void> delete(@PathVariable("id") int bookId) {
     return this.bookService.delete(bookId);
+  }
+
+  @GetMapping("/search")
+  public Flux<Book> searchBooks(
+      @RequestParam("query") String query
+
+  ) {
+    return this.bookService.searchBooks(query);
   }
 
 }

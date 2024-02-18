@@ -35,6 +35,13 @@
       <artifactId>r2dbc-postgresql</artifactId>
       <scope>runtime</scope>
     </dependency>
+    <!-- This dependency allows you to use StepVerifier -->
+    <dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
   </dependencies>
 
 </project>
